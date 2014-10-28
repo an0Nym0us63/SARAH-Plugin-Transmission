@@ -1,0 +1,41 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruletransmission" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruletransmission" scope="public">
+    <example>Sarah met en pause les torrents</example>
+    <tag>out.action=new Object(); </tag>
+    <item>Sarah</item>
+
+    <one-of>
+      <item>met en pause les torrents<tag>out.action.transmission = "Pause_all";</tag></item>
+	  <item>active les torrents <tag>out.action.transmission = "Resume_all";</tag></item>	  
+	  <item>supprime les torrents terminés<tag>out.action.transmission = "Del_finished";</tag></item>
+    </one-of>
+	<item repeat="0-1">
+      <one-of>
+		<item>pour</item>
+		<item>pendant</item>
+	  </one-of>
+      <one-of>
+        <item>une minute<tag> out.action.time=60000; </tag></item>
+        <item>deux minutes<tag> out.action.time=120000; </tag></item>
+        <item>cinq minutes<tag> out.action.time=300000; </tag></item>
+        <item>dix minutes<tag> out.action.time=600000; </tag></item>
+        <item>quinze minutes<tag> out.action.time=900000; </tag></item>
+        <item>un quart d'heure<tag> out.action.time=900000; </tag></item>
+        <item>ving minutes<tag> out.action.time=1200000; </tag></item>
+        <item>trente minutes<tag> out.action.time=1800000; </tag></item>
+        <item>une demi heure<tag> out.action.time=1800000; </tag></item>
+        <item>quarante cinq minutes<tag> out.action.time=2700000; </tag></item>
+        <item>trois quart d'heure<tag> out.action.time=2700000; </tag></item>
+        <item>soixante minutes<tag> out.action.time=3600000; </tag></item>
+        <item>une heure<tag> out.action.time=3600000; </tag></item>
+        <item>quatre vingt dix minutes<tag> out.action.time=5400000; </tag></item>		
+        <item>une heure trente<tag> out.action.time=5400000; </tag></item>
+        <item>une heure et demi<tag> out.action.time=5400000; </tag></item>
+		<item>deux heures<tag> out.action.time=7200000; </tag></item>
+		<item>six heures<tag> out.action.time=21600000; </tag></item>
+      </one-of>
+    </item>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/transmission";</tag>
+    
+  </rule>  
+</grammar>

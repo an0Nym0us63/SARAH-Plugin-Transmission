@@ -1,0 +1,8 @@
+#transmission .portlet-header,
+#transmission .portlet-footer {
+  background-color: #926937;
+}
+#transmission .portlet-body {
+  color: #FFF;
+  background: #926937;
+}

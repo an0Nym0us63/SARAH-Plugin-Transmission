@@ -1,0 +1,10 @@
+{
+  "modules" : { 
+    "transmission"  : {
+      "description" : "Transmission",
+      "version" : "1.2",
+      "host" : "",
+      "port" : ""
+    }
+  }
+}
